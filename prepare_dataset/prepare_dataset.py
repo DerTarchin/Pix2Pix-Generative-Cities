@@ -39,11 +39,11 @@ if __name__ == "__main__":
 
     maxphotos = raw_input("Max photos (null=all): ")
     maxphotos = int(maxphotos) if len(maxphotos) else img_total
-
-    width = raw_input("Width (null=512): ")
-    width = int(width) if len(width) else 512
+    
     height = raw_input("Height (null=512): ")
     height = int(height) if len(height) else 512
+    width = raw_input("Width (null=512): ")
+    width = int(width) if len(width) else 512
 
     counter = 0
     for i in range(len(cities)):
