@@ -5,6 +5,7 @@ Unity project for generative city in semantic image segmentation style.
 ## Installation
 - Open Unity and create empty project.
 - Dump contents of `/Assets` folder from this repo into `/Assets` folder of the empty project.
+- Open `scene0.unity` in Unity Editor.
 
 ## Files & Folders
 script | contents
