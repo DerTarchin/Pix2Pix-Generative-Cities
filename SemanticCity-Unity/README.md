@@ -7,7 +7,7 @@ Unity project for generative city in semantic image segmentation style.
 - Dump contents of `/Assets` folder from this repo into `/Assets` folder of the empty project.
 
 ## Files & Folders
-script | Contents
+script | contents
 ----------|---------
 `City.cs` | city generator script
 `Car.cs` | appearance and AI for moving objects (cars, bikes, people, etc.)
@@ -18,7 +18,7 @@ script | Contents
 `SplitCam.cs` | split camera for stereo
 
 
-dir name | contents
+dir | contents
 ----------|---------
-`Resources/LABELED_MATERIALS` | cityscape color coding as unity materials
-`Standard Assets` | contains Unity's default FPS controller
+`/Resources/LABELED_MATERIALS` | cityscape color coding as unity materials
+`/Standard\ Assets` | contains Unity's default FPS controller
