@@ -47,7 +47,7 @@ options | effects
 `-s 2048x1024 ` | Resolution
 `-start_number 1 ` | Start index (of file names)
 `-i output_dir/images/%05d-outputs.png ` | Input files regex
-`-vcodec libx264 -crf 25  -pix_fmt yuv420p ` | ???
+`-vcodec libx264 -crf 25  -pix_fmt yuv420p ` | codec (?)
 `test.mp4` | Output video file name
 
 ## pix2pixHD Fixes

@@ -2,15 +2,24 @@ import cv2 as cv
 import os
 import numpy as np
 import barrel
+import sys
 
 # ######### RESIZE ##########
-# d = "input_dir"
-# images = os.listdir(d)
-# for f in images:
-#     if not f.startswith("."):
-#         im = cv.imread(d+"/"+f)
-#         im = cv.resize(im,(512,256))
-#         cv.imwrite(d+"/"+f,im)
+d = "../../Video/Frames/r1.3_2x_f"
+images = os.listdir(d)
+count = 0
+for f in images:
+    if not f.startswith("."):
+        im = cv.imread(d+"/"+f)
+        try:
+          im = cv.resize(im,(4096,1024))
+        except:
+          print f
+          break
+        cv.imwrite(d+"/"+f,im)
+        count+=1
+        if (count)%10 == 0: print ". (" + str(count) + ")"
+        else: sys.stdout.write('.')
 
 # ######### VR DISTORT ##########
 # d = "images"
@@ -22,13 +31,13 @@ import barrel
 #         cv.imwrite(d+"/"+f,im)
 
 ######### DOUBLE IMG SIDE BY SIDE ##########
-d = "input_dir"
-images = os.listdir(d)
-for f in images:
-    if not f.startswith("."):
-        im = cv.imread(d+"/"+f)
-        im = np.hstack((im,im))
-        cv.imwrite(d+"/"+".".join(f.split(".")[:-1])+".jpg",im)
+# d = "input_dir"
+# images = os.listdir(d)
+# for f in images:
+#     if not f.startswith("."):
+#         im = cv.imread(d+"/"+f)
+#         im = np.hstack((im,im))
+#         cv.imwrite(d+"/"+".".join(f.split(".")[:-1])+".jpg",im)
 
 # ######### SPLIT DOUBLE IMG ##########
 # d = "input_dir"

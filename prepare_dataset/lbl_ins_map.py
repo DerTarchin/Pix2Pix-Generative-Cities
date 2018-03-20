@@ -37,9 +37,8 @@ def process(impath):
     def save():
         g = ".".join(impath.split(".")[:-1])
         g1,g2 = "/".join(g.split("/")[:-1]), g.split("/")[-1]
-        cv.imwrite(g1+"/out/"+g2+"_lbl"+".png",imo)
-        cv.imwrite(g1+"/out/"+g2+"_ins"+".png",imi)
-
+        cv.imwrite(g1+"_f/"+g2+"_lbl"+".png",imo)
+        cv.imwrite(g1+"_f/"+g2+"_ins"+".png",imi)
 
     def label0(c):
         mindist = float("inf")
@@ -95,7 +94,7 @@ def process(impath):
         if i % 10 == 0:  
             hist = sorted(hist, key=lambda x: -x[2])[:100]
 
-            print "row",i,h
+            # print "row",i,h
             #print len(hist)
         if i % 100 == 0:
             save()
@@ -108,8 +107,10 @@ def process(impath):
 if __name__ == "__main__":
     a1 = int(sys.argv[1])
     a2 = int(sys.argv[2])
+    d = sys.argv[3]
+    # a1 = 0
+    # a2 = 1273
 
-    d = "input_dir"
     images = os.listdir(d)
     images.sort()
 
@@ -124,7 +125,7 @@ if __name__ == "__main__":
         for f in images[r[0]:r[1]]:
             if not f.startswith("."):
                 process(d+"/"+f)
-                #thread.start_new_thread (process, (d+"/"+f,))
+                # thread.start_new_thread (process, (d+"/"+f,))
                 pcount[0] += 1
 
         while pcount[0] != 0:

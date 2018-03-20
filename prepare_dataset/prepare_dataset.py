@@ -2,7 +2,7 @@ from PIL import Image
 import os
 import sys
 
-img_folder = "../../leftImg8bit_trainvaltest/leftImg8bit/train_lemur"
+img_folder = "../../leftImg8bit_trainvaltest/leftImg8bit/train_orig"
 ann_folder = "../../gtFine_trainvaltest/gtFine/train"
 
 print "-- Dataset Preparation --"
@@ -97,31 +97,6 @@ if __name__ == "__main__":
             cm["index"] += 1
         cityIndex = (cityIndex + 1) % len(cities)
     print "\n" + str(counter) + " finished."
-
-    # counter = 0
-    # for i in range(len(cities)):
-    #     fnames0 = os.listdir(img_folder+"/"+cities[i])
-    #     fnames1 = map((lambda x: "_".join(x.split("_")[:-1])+"_gtFine_color.jpeg"), fnames0)
-
-    #     if(counter > maxphotos): break
-    #     print "\nProcessing /" + cities[i]
-
-    #     for j in range(0,len(fnames0)):
-    #         counter += 1
-    #         if(counter > maxphotos): break
-    #         f0 = img_folder+"/"+cities[i]+"/"+fnames0[j]
-    #         f1 = ann_folder+"/"+cities[i]+"/"+fnames1[j]
-    #         im0 = Image.open(f0)
-    #         im1 = Image.open(f1.replace('.jpeg','.png'))
-    #         im0 = smart_resize(im0,width,height)
-    #         im1 = smart_resize(im1,width,height)
-    #         im = Image.new('RGB',(im0.size[0]+im1.size[0],im0.size[1]))
-    #         im.paste(im0,(0,0))
-    #         im.paste(im1,(im0.size[0],0))
-    #         #im.show()
-    #         fname = "_".join(fnames0[j].split("_")[:-1])
-    #         im.save("out/"+str(counter)+".png","PNG")
-    #         sys.stdout.write('.')
     print "\n"
 
         
