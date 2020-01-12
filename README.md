@@ -188,6 +188,8 @@ In our final submissions, we have a few final renders. Using the same footage, w
 
 [Comparison Video](https://youtu.be/uuQZWXrr3JE) - [Technical Video](https://youtu.be/Bzl7ggemIYc) - [Final Results](https://youtu.be/-P_Sfl4e1xo) - [Source Code](https://github.com/DerTarchin/Pix2Pix-Generative-Ciites)
 
+[![Comparison Video](https://img.youtube.com/vi/uuQZWXrr3JE/0.jpg)](https://www.youtube.com/watch?v=uuQZWXrr3JE)
+
 # Conclusion
 We consider this project a success in many ways. We convincingly generated “dream-like” (pix2pix) or semi-realistic (pix2pixHD), or perhaps “artistic” renderings of a completely procedurally generated cityscape. There are plenty of improvements that could be made, both in terms of the mesh detail in the generated city, and for tweaking the training of networks (and using new networks as they become available). pix2pixHD is relatively new but is quite promising, as the algorithm differs greatly from it’s pix2pix “parent,” solving many issues at once such as static textures, flickering and “blurry” images. There are also a growing number of datasets to train with, including ones making use of creative practices such as generating labels from the game GTAV by intercepting the video card. As these technologies advance, the generated imagery will become more realistic as well.
 
