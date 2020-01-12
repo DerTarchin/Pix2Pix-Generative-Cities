@@ -184,11 +184,22 @@ The second approach was chosen since it takes around same time per image as the 
 
 # Results
 
+[Source Code](https://github.com/DerTarchin/Pix2Pix-Generative-Ciites)
+
 In our final submissions, we have a few final renders. Using the same footage, we created one render using the 80-epoch pix2pix model trained on full-scale images, one using the 160-epoch pix2pix model trained on 512x256 size images, and one using pix2pixHD algorithm. We color corrected the final output of the HD render to remove the greenish hues and low contrast, making it even more realistic. And finally, we created a new render of a “tour through the city,” in the form of a timelapse generated with Microsoft Hyperlapse Pro.
 
-[Comparison Video](https://youtu.be/uuQZWXrr3JE) - [Technical Video](https://youtu.be/Bzl7ggemIYc) - [Final Results](https://youtu.be/-P_Sfl4e1xo) - [Source Code](https://github.com/DerTarchin/Pix2Pix-Generative-Ciites)
+
+[Comparison Video](https://youtu.be/uuQZWXrr3JE)
 
 [![Comparison Video](https://img.youtube.com/vi/uuQZWXrr3JE/0.jpg)](https://www.youtube.com/watch?v=uuQZWXrr3JE)
+
+[Technical Video](https://youtu.be/Bzl7ggemIYc)
+
+[![Technical Video](https://img.youtube.com/vi/Bzl7ggemIYc/0.jpg)](https://www.youtube.com/watch?v=Bzl7ggemIYc)
+
+[Final Results](https://youtu.be/-P_Sfl4e1xo)
+
+[![Final Results Video](https://img.youtube.com/vi/-P_Sfl4e1xo/0.jpg)](https://www.youtube.com/watch?v=-P_Sfl4e1xo)
 
 # Conclusion
 We consider this project a success in many ways. We convincingly generated “dream-like” (pix2pix) or semi-realistic (pix2pixHD), or perhaps “artistic” renderings of a completely procedurally generated cityscape. There are plenty of improvements that could be made, both in terms of the mesh detail in the generated city, and for tweaking the training of networks (and using new networks as they become available). pix2pixHD is relatively new but is quite promising, as the algorithm differs greatly from it’s pix2pix “parent,” solving many issues at once such as static textures, flickering and “blurry” images. There are also a growing number of datasets to train with, including ones making use of creative practices such as generating labels from the game GTAV by intercepting the video card. As these technologies advance, the generated imagery will become more realistic as well.
